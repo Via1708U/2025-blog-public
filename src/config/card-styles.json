@@ -42,11 +42,11 @@
 		"enabled": false
 	},
 	"socialButtons": {
-		"width": 315,
-		"height": 48,
+		"width": 127,
+		"height": 54,
 		"order": 6,
-		"offsetX": -150,
-		"offsetY": 246,
+		"offsetX": -137,
+		"offsetY": 247,
 		"enabled": true
 	},
 	"shareCard": {
