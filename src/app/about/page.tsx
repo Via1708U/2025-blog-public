@@ -163,7 +163,7 @@ export default function Page() {
 									<div className='prose prose-sm max-w-none [&_strong]:!text-[#4F8F9D] [&_strong]:!font-bold'>{content}</div>
 								</motion.div>
 							)}
-							<<motion.div
+							<motion.div
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: 0.2 }}
@@ -216,7 +216,7 @@ export default function Page() {
       <div className='text-secondary text-xs'>下载简历</div>
     </div>
   </div>
-</motion.div>>
+</motion.div>
 						</>
 					)}
 				</div>
