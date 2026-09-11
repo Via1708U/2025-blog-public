@@ -115,7 +115,7 @@ export default function Page() {
 									<div className='text-secondary text-center'>预览渲染中...</div>
 								) : (
 									<div className='card relative p-6'>
-										<div className='prose prose-sm max-w-none'>{content}</div>
+										<div className='prose prose-sm max-w-none [&_strong]:text-inherit [&_strong]:font-bold'>{content}</div>
 									</div>
 								)}
 							</div>
@@ -159,7 +159,7 @@ export default function Page() {
 								<div className='text-secondary text-center'>加载中...</div>
 							) : (
 								<motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className='card relative p-6'>
-									<div className='prose prose-sm max-w-none'>{content}</div>
+									<div className='prose prose-sm max-w-none [&_strong]:text-inherit [&_strong]:font-bold'>{content}</div>
 								</motion.div>
 							)}
 						</>
