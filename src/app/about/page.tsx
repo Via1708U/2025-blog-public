@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { motion } from 'motion/react'
+import Link from 'next/link'
 import { toast } from 'sonner'
 import { useMarkdownRender } from '@/hooks/use-markdown-render'
 import { pushAbout, type AboutData } from './services/push-about'
@@ -162,6 +163,60 @@ export default function Page() {
 									<div className='prose prose-sm max-w-none [&_strong]:!text-[#4F8F9D] [&_strong]:!font-bold'>{content}</div>
 								</motion.div>
 							)}
+							<<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.2 }}
+  className='mt-8 flex items-start justify-center gap-12'>
+
+  {/* 查看完整简历 */}
+  <div className='flex flex-col items-center gap-2'>
+    <Link
+      href='/resume'
+      className='group flex h-[64px] w-[64px] items-center justify-center rounded-full border bg-white/70 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-md'>
+      <svg
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        strokeWidth='1.8'
+        className='h-7 w-7 text-secondary transition-colors group-hover:text-[#4F8F9D]'>
+        <path d='M6 3h9l3 3v15H6z' />
+        <path d='M14 3v4h4' />
+        <path d='M9 12h6' />
+        <path d='M9 16h6' />
+      </svg>
+    </Link>
+
+    <div className='text-center'>
+      <div className='text-sm font-medium'>View Resume</div>
+      <div className='text-secondary text-xs'>查看简历</div>
+    </div>
+  </div>
+
+  {/* 下载 PDF */}
+  <div className='flex flex-col items-center gap-2'>
+    <a
+      href='/resume.pdf'
+      download
+      className='group flex h-[64px] w-[64px] items-center justify-center rounded-full border bg-white/70 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-md'>
+      <svg
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        strokeWidth='1.8'
+        className='h-7 w-7 text-secondary transition-colors group-hover:text-[#4F8F9D]'>
+        <path d='M12 3v12' />
+        <path d='m7 10 5 5 5-5' />
+        <path d='M5 21h14' />
+      </svg>
+    </a>
+
+    <div className='text-center'>
+      <div className='text-sm font-medium'>Download PDF</div>
+      <div className='text-secondary text-xs'>下载简历</div>
+    </div>
+  </div>
+</motion.div>>
 						</>
 					)}
 				</div>
