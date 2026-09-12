@@ -7,16 +7,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { motion } from 'motion/react'
 import { useCenterStore } from '@/hooks/use-center'
 import { CARD_SPACING } from '@/consts'
-import ScrollOutlineSVG from '@/svgs/scroll-outline.svg'
-import ScrollFilledSVG from '@/svgs/scroll-filled.svg'
-import ProjectsFilledSVG from '@/svgs/projects-filled.svg'
-import ProjectsOutlineSVG from '@/svgs/projects-outline.svg'
-import AboutFilledSVG from '@/svgs/about-filled.svg'
-import AboutOutlineSVG from '@/svgs/about-outline.svg'
-import ShareFilledSVG from '@/svgs/share-filled.svg'
-import ShareOutlineSVG from '@/svgs/share-outline.svg'
-import WebsiteFilledSVG from '@/svgs/website-filled.svg'
-import WebsiteOutlineSVG from '@/svgs/website-outline.svg'
+import { LayoutGrid, Code2, Palette, FileText, UserRound } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { cn } from '@/lib/utils'
@@ -26,32 +17,32 @@ import { HomeDraggableLayer } from '@/app/(home)/home-draggable-layer'
 
 const list = [
 	{
-		icon: ScrollOutlineSVG,
-		iconActive: ScrollFilledSVG,
+		icon: LayoutGrid,
+		iconActive: LayoutGrid,
 		label: '精选作品',
-		href: '/work'
+		href: '/works'
 	},
 	{
-		icon: ProjectsOutlineSVG,
-		iconActive: ProjectsFilledSVG,
+		icon: Code2,
+		iconActive: Code2,
 		label: '数字项目',
 		href: '/digital'
 	},
 	{
-		icon: AboutOutlineSVG,
-		iconActive: AboutFilledSVG,
+		icon: Palette,
+		iconActive: Palette,
 		label: '视觉设计',
 		href: '/visual'
 	},
 	{
-		icon: ShareOutlineSVG,
-		iconActive: ShareFilledSVG,
-		label: '内容创新',
+		icon: FileText,
+		iconActive: FileText,
+		label: '内容创作',
 		href: '/content'
 	},
 	{
-		icon: WebsiteOutlineSVG,
-		iconActive: WebsiteFilledSVG,
+		icon: UserRound,
+		iconActive: UserRound,
 		label: '关于我',
 		href: '/about'
 	}
