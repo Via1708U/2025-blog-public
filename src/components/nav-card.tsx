@@ -28,32 +28,32 @@ const list = [
 	{
 		icon: ScrollOutlineSVG,
 		iconActive: ScrollFilledSVG,
-		label: '近期文章',
-		href: '/blog'
+		label: '精选作品',
+		href: '/work'
 	},
 	{
 		icon: ProjectsOutlineSVG,
 		iconActive: ProjectsFilledSVG,
-		label: '我的项目',
-		href: '/projects'
+		label: '数字项目',
+		href: '/digital'
 	},
 	{
 		icon: AboutOutlineSVG,
 		iconActive: AboutFilledSVG,
-		label: '关于我',
-		href: '/about'
+		label: '视觉设计',
+		href: '/visual'
 	},
 	{
 		icon: ShareOutlineSVG,
 		iconActive: ShareFilledSVG,
-		label: '推荐分享',
-		href: '/share'
+		label: '内容创新',
+		href: '/content'
 	},
 	{
 		icon: WebsiteOutlineSVG,
 		iconActive: WebsiteFilledSVG,
-		label: '优秀博客',
-		href: '/bloggers'
+		label: '关于我',
+		href: '/about'
 	}
 ]
 
@@ -146,7 +146,7 @@ export default function NavCard() {
 
 					{(form === 'full' || form === 'icons') && (
 						<>
-							{form !== 'icons' && <div className='text-secondary mt-6 text-sm uppercase'>General</div>}
+							{form !== 'icons' && <div className='text-secondary mt-6 text-sm uppercase'>Portfolio</div>}
 
 							<div className={cn('relative mt-2 space-y-2', form === 'icons' && 'mt-0 flex items-center gap-6 space-y-0')}>
 								<motion.div
