@@ -13,14 +13,14 @@
 }
 
 @layer base {
-	html {
-		@apply text-primary bg-bg h-full leading-tight;
-		scroll-behavior: smooth;
-	}
+html {
+  @apply text-primary bg-bg min-h-full leading-tight;
+  scroll-behavior: smooth;
+}
 
-	body {
-		@apply h-full bg-none;
-	}
+body {
+  @apply min-h-screen bg-none;
+}
 	* {
 		@apply border-border;
 	}
